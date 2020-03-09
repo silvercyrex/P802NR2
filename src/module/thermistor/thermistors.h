@@ -70,6 +70,12 @@
 #if ANY_THERMISTOR_IS(501) // 100K Zonestar thermistor
   #include "thermistor_501.h"
 #endif
+#if ANY_THERMISTOR_IS(5001) // 100k thermistor - custom for my printers Tool 0
+  #include "thermistor_5001.h"
+#endif
+#if ANY_THERMISTOR_IS(5002) // 100k thermistor - custom for my printers Tool 0
+  #include "thermistor_5002.h"
+#endif
 #if ANY_THERMISTOR_IS(512) // 100k thermistor in RPW-Ultra hotend, Pull-up = 4.7 kOhm, "unknown model"
   #include "thermistor_512.h"
 #endif

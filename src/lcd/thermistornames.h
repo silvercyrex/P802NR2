@@ -100,6 +100,10 @@
 // Modified thermistors
 #elif THERMISTOR_ID == 51
   #define THERMISTOR_NAME "EPCOS 1K"
+#elif THERMISTOR_ID == 5001
+  #define THERMISTOR_NAME "Custom"
+#elif THERMISTOR_ID == 5002
+  #define THERMISTOR_NAME "Custom"
 #elif THERMISTOR_ID == 52
   #define THERMISTOR_NAME "ATC204GT-2 1K"
 #elif THERMISTOR_ID == 55
