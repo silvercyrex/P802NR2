@@ -1,9 +1,9 @@
 /**
  * Marlin 3D Printer Firmware
- * Copyright (c) 2020 MarlinFirmware [https://github.com/MarlinFirmware/Marlin]
+ * Copyright (C) 2016 MarlinFirmware [https://github.com/MarlinFirmware/Marlin]
  *
  * Based on Sprinter and grbl.
- * Copyright (c) 2011 Camiel Gubbels / Erik van der Zalm
+ * Copyright (C) 2011 Camiel Gubbels / Erik van der Zalm
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -19,44 +19,57 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *
  */
-#pragma once
 
-// R25 = 100 kOhm, beta25 = 4267 K, 4.7 kOhm pull-up
-// 100k ParCan thermistor (104GT-2)
-// ATC Semitec 104GT-2/104NT-4-R025H42G (Used in ParCan)
-// Verified by linagee. Source: http://shop.arcol.hu/static/datasheets/thermistors.pdf
-// Calculated using 4.7kohm pullup, voltage divider math, and manufacturer provided temp/resistance
+// ZONESTAR hotbed QWG-104F-3950 thermistor
 const short temptable_5002[][2] PROGMEM = {
-  { OV(   1), 713 },
-  { OV(  17), 300 }, // top rating 300C
-  { OV(  20), 290 },
-  { OV(  23), 280 },
-  { OV(  27), 270 },
-  { OV(  29), 260 },
-  { OV(  31), 237 },
-  { OV(  37), 227 },
-  { OV(  46), 217 },
-  { OV(  57), 208 },
-  { OV(  69), 199 },
-  { OV(  85), 192 },
-  { OV( 101), 188 },
-  { OV( 133), 175 },
-  { OV( 155), 170 },
-  { OV( 189), 160 },
-  { OV( 230), 150 },
-  { OV( 278), 140 },
-  { OV( 336), 130 },
-  { OV( 400), 119 },/////////////////
-  { OV( 478), 109 },
-  { OV( 555),  99 },
-  { OV( 635),  88 },
-  { OV( 710),  73 },
-  { OV( 785),  64 },
-  { OV( 845),  55 },
-  { OV( 899),  47 },
-  { OV( 924),  43 },
-  { OV( 975),  25 },
-  { OV( 986),  20 },
-  { OV(1000),  10 },
-  { OV(1010),   0 }
+  { OV(   1), 938 },
+  { OV(   8), 320 },
+  { OV(  16), 300 },
+  { OV(  27), 290 },
+  { OV(  36), 272 },
+  { OV(  47), 258 },
+  { OV(  56), 248 },
+  { OV(  68), 245 },
+  { OV(  78), 237 },
+  { OV(  89), 228 },
+  { OV(  99), 221 },
+  { OV( 110), 215 },
+  { OV( 120), 209 },
+  { OV( 131), 204 },
+  { OV( 141), 199 },
+  { OV( 151), 195 },
+  { OV( 161), 190 },
+  { OV( 171), 187 },
+  { OV( 181), 183 },
+  { OV( 201), 179 },
+  { OV( 221), 170 },
+  { OV( 251), 165 },
+  { OV( 261), 160 },
+  { OV( 321), 150 },
+  { OV( 361), 144 },
+  { OV( 401), 140 },
+  { OV( 421), 133 },
+  { OV( 451), 130 },
+  { OV( 551), 120 },
+  { OV( 571), 117 },
+  { OV( 596), 110 },
+  { OV( 626), 105 },
+  { OV( 666), 100 },
+  { OV( 677),  95 },
+  { OV( 697),  90 },
+  { OV( 717),  85 },
+  { OV( 727),  79 },
+  { OV( 750),  72 },
+  { OV( 789),  69 },
+  { OV( 819),  65 },
+  { OV( 861),  57 },
+  { OV( 870),  55 },
+  { OV( 881),  51 },
+  { OV( 911),  45 },
+  { OV( 922),  39 },
+  { OV( 968),  28 },
+  { OV( 980),  23 },
+  { OV( 991),  17 },
+  { OV(1000),   9 },
+  { OV(1021), -27 }
 };

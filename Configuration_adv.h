@@ -826,7 +826,7 @@
   #define CALIBRATION_NOZZLE_OUTER_DIAMETER      2.0  // mm
 
   // Uncomment to enable reporting (required for "G425 V", but consumes PROGMEM).
-  //#define CALIBRATION_REPORTING
+  #define CALIBRATION_REPORTING
 
   // The true location and dimension the cube/bolt/washer on the bed.
   #define CALIBRATION_OBJECT_CENTER     { 264.0, -22.0,  -2.0 } // mm
@@ -845,7 +845,7 @@
 
   // Define the pin to read during calibration
   #ifndef CALIBRATION_PIN
-    //#define CALIBRATION_PIN -1            // Define here to override the default pin
+    #define CALIBRATION_PIN 2            // Define here to override the default pin
     #define CALIBRATION_PIN_INVERTING false // Set to true to invert the custom pin
     //#define CALIBRATION_PIN_PULLDOWN
     #define CALIBRATION_PIN_PULLUP
@@ -1798,10 +1798,10 @@
     #define MIN_AUTORETRACT 0.1           // (mm) Don't convert E moves under this length
     #define MAX_AUTORETRACT 10.0          // (mm) Don't convert E moves over this length
   #endif
-  #define RETRACT_LENGTH 7                // (mm) Default retract length (positive value)
-  #define RETRACT_LENGTH_SWAP 13          // (mm) Default swap retract length (positive value)
+  #define RETRACT_LENGTH 2.5                // (mm) Default retract length (positive value)
+  #define RETRACT_LENGTH_SWAP 5          // (mm) Default swap retract length (positive value)
   #define RETRACT_FEEDRATE 45             // (mm/s) Default feedrate for retracting
-  #define RETRACT_ZRAISE 2                // (mm) Default retract Z-raise
+  #define RETRACT_ZRAISE .15                // (mm) Default retract Z-raise
   #define RETRACT_RECOVER_LENGTH 0        // (mm) Default additional recover length (added to retract length on recover)
   #define RETRACT_RECOVER_LENGTH_SWAP 0   // (mm) Default additional swap recover length (added to retract length on recover from toolchange)
   #define RETRACT_RECOVER_FEEDRATE 8      // (mm/s) Default feedrate for recovering from retraction
