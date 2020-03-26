@@ -745,7 +745,7 @@
 
 #define LIMITED_MAX_FR_EDITING        // Limit edit via M203 or LCD to DEFAULT_MAX_FEEDRATE * 2
 #if ENABLED(LIMITED_MAX_FR_EDITING)
-  #define MAX_FEEDRATE_EDIT_VALUES    { 600, 600, 10, 50 } // ...or, set your own edit limits
+  #define MAX_FEEDRATE_EDIT_VALUES    { 200, 200, 50, 50 } // ...or, set your own edit limits
 #endif
 
 /**
@@ -966,7 +966,7 @@
 #define Z_PROBE_SPEED_FAST HOMING_FEEDRATE_Z
 
 // Feedrate (mm/m) for the "accurate" probe of each point
-#define Z_PROBE_SPEED_SLOW (Z_PROBE_SPEED_FAST / 2)
+#define Z_PROBE_SPEED_SLOW (Z_PROBE_SPEED_FAST / 1.5)
 
 /**
  * Multiple Probing
@@ -994,9 +994,9 @@
  * Example: `M851 Z-5` with a CLEARANCE of 4  =>  9mm from bed to nozzle.
  *     But: `M851 Z+1` with a CLEARANCE of 2  =>  2mm from bed to nozzle.
  */
-#define Z_CLEARANCE_DEPLOY_PROBE   11 // Z Clearance for Deploy/Stow
-#define Z_CLEARANCE_BETWEEN_PROBES  7 // Z Clearance between probe points
-#define Z_CLEARANCE_MULTI_PROBE     7 // Z Clearance between multiple probes
+#define Z_CLEARANCE_DEPLOY_PROBE    11 // Z Clearance for Deploy/Stow
+#define Z_CLEARANCE_BETWEEN_PROBES  11 // Z Clearance between probe points
+#define Z_CLEARANCE_MULTI_PROBE     11 // Z Clearance between multiple probes
 //#define Z_AFTER_PROBING           5 // Z position after probing is done
 
 #define Z_PROBE_LOW_POINT          -2 // Farthest distance below the trigger-point to go before stopping
@@ -1539,7 +1539,7 @@
  * Attention: EXPERIMENTAL. G-code arguments may change.
  *
  */
-#define NOZZLE_CLEAN_FEATURE
+//#define NOZZLE_CLEAN_FEATURE
 
 #if ENABLED(NOZZLE_CLEAN_FEATURE)
   // Default number of pattern repetitions
